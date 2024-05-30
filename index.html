@@ -19,6 +19,14 @@
 
       <!-- Header section -->
       <header class="header">
+            <div class="header__logo-mobile">
+                  <p>
+                        <a href="index.html">
+                              <b><span>Web</span>Studio</b>
+                        </a>
+                  </p>
+            </div>
+
             <div class="container">
                   <!--Logo-->
                   <div class="header__logo">
@@ -59,7 +67,55 @@
 
                   </div>
             </div>
+
+            <button class="js-open-menu menu-button button-toggle-menu" aria-expanded="false"
+                  aria-controls="mobile-menu">
+                  <svg class="icon">
+                        <use href="./img/icons/menu-symbol-defs.svg#icon-menu" />
+                  </svg>
+
+
+            </button>
+
       </header>
+
+      <!-- Menu -->
+
+      <div class="js-menu-container">
+
+            <button class="js-close-menu button button-close-menu" type="button">
+                  x
+
+            </button>
+
+            <nav class="header__navigation">
+                  <a href="index.html" class="studio">Studio</a>
+                  <a href="portfolio.html" class="portfolio">Portfolio</a>
+                  <a href="contacts.html" class="contacts">Contacts</a>
+            </nav>
+
+            <div class="header__contacts">
+                  <div class="header__contacts-info">
+                        <p class="header__contacts-info-phone">
+                              <a href="tel:+12127724150">
+                                    +1 212-772-4150</a>
+                        </p>
+                        <p class="header__contacts-info-email">
+                              <a href="emailto:info@devstudio.com">info@devstudio.com</a>
+                        </p>
+
+                  </div>
+            </div>
+
+            <div class="menu__socials">
+                  <a class="social" href="">Instagram</a>
+                  <a class="social" href="">Twitter</a>
+                  <a class="social" href="">Facebook</a>
+                  <a class="social" href="">LinkedIn</a>
+            </div>
+
+      </div>
+
 
       <!-- Main section -->
       <main>
@@ -69,7 +125,8 @@
                   <div class="container">
                         <h1 class="hero__title">Effective solutions for <br>
                               your business</h1>
-                        <button data-modal-open class="hero__button" type="button">Request our service</button>
+                        <button data-modal-open class="hero__button" type="button">Request our
+                              service</button>
                   </div>
 
             </section>
@@ -86,7 +143,8 @@
                                                 <use href="./img/icons/symbol-defs.svg#icon-antenna" />
                                           </svg>
                                     </p>
-                                    <p class="whatwedo__skills-item"><strong>ATTENTION TO DETAILS</strong><br>
+                                    <p class="whatwedo__skills-item"><strong>ATTENTION TO
+                                                DETAILS</strong><br>
                                           We go into all the details and processes of your business to
                                           develop a customized
                                           solution.
@@ -128,7 +186,8 @@
                                                 <use href="./img/icons/symbol-defs.svg#icon-astronaut" />
                                           </svg>
                                     </p>
-                                    <p class="whatwedo__skills-item"><strong>MODERN TECHNOLOGIES</strong><br>
+                                    <p class="whatwedo__skills-item"><strong>MODERN
+                                                TECHNOLOGIES</strong><br>
                                           We use innovative tools to solve assigned tasks. It's time to
                                           simplify work
                                           processes.
@@ -541,7 +600,7 @@
 
       <div data-modal class="is-hidden">
             <div data-modal-content>
-                  <button data-modal-close type="button">X</button>
+                  <button data-modal-close class="button" type="button">X</button>
                   <h2 class="modal-title">Leave your information and we'll call you back</h2>
 
                   <form class="modal-form" action="">
@@ -573,7 +632,8 @@
                               <input type="checkbox" name="agree" value="agree" class="modal-form__input">
                               <span class="replace-checkbox modal-checkbox__position">
                                     <svg>
-                                          <use href="./img/icons/form-symbol-defs.svg#icon-form-check"></use>
+                                          <use href="./img/icons/form-symbol-defs.svg#icon-form-check">
+                                          </use>
                                     </svg>
                               </span>
 
@@ -589,7 +649,8 @@
       </div>
 
 
-      <script src="./modal.js"></script>
+      <script src="./js/modal.js"></script>
+      <script src="./js/mobile-menu.js"></script>
 </body>
 
 </html>

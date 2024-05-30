@@ -832,7 +832,8 @@ body {
   transition-duration: 1.5s;
   padding: 40px 40px;
 }
-[data-modal-close] {
+[data-modal-close],
+.button {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -1000,17 +1001,17 @@ body {
 }
 
 @media screen and (max-width: 1200px) {
+  /*.js-open-menu {
+    display: block;
+  }
+
+  header .container {
+    display: none;
+  }
+*/
   .container {
     padding: 30px;
   }
-
-  /* Header */
-
-  /*.header .container {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-  }*/
 
   /* What we do */
 
@@ -1117,5 +1118,207 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+}
+
+/* menu style*/
+
+.js-menu-container {
+  display: none;
+  background-color: var(--white);
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 90%;
+  overflow-y: auto;
+  z-index: 1000;
+}
+.is-open {
+  display: block;
+}
+
+.js-menu-container.is-open {
+  display: block;
+}
+
+.menu-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.menu-button .icon {
+  fill: var(--black);
+  width: 40px;
+  height: 40px;
+}
+.menu-button .icon:hover {
+  fill: var(--blue);
+}
+
+.js-open-menu {
+  display: none;
+}
+
+.js-open-menu.is-hidden {
+  display: none;
+}
+
+.header__logo-mobile {
+  display: none;
+  font-family: var(--logo-font);
+  font-size: 26px;
+  line-height: 1.1;
+  color: var(--black);
+  text-decoration: none;
+  text-transform: none;
+}
+
+.header__logo-mobile a {
+  text-decoration: none;
+}
+
+.header__logo-mobile span {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+.header__logo-mobile b {
+  color: var(--black);
+}
+
+@media screen and (max-width: 1200px) {
+  .js-open-menu {
+    display: block;
+  }
+
+  .header .container {
+    display: none;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    margin: 16px 15px 16px 15px;
+  }
+
+  .header__logo-mobile {
+    display: block;
+  }
+
+  .header__navigation,
+  .header__contacts-info {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .header__navigation {
+    margin-bottom: 306px;
+    margin-top: 48px;
+    margin-left: 40px;
+  }
+
+  .header__navigation a {
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 46.88px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    transition: none;
+    transform: none;
+    position: static;
+    animation: none;
+    justify-content: left;
+  }
+
+  .header__navigation a:hover,
+  .header__navigation a:focus,
+  .header__navigation a:active {
+    color: var(--blue);
+    transition: none;
+    transform: none;
+    animation: none;
+  }
+
+  .header__navigation a:hover::after,
+  .header__navigation a:focus::after,
+  .header__navigation a:active::after {
+    display: none;
+  }
+
+  .page-studio .header__navigation a.studio::after {
+    display: none;
+  }
+
+  .page-portfolio .header__navigation a.portfolio::after {
+    display: none;
+  }
+
+  .header__contacts {
+    display: flex;
+    margin-left: 40px;
+    justify-content: flex-start;
+    margin-bottom: 64px;
+  }
+
+  .header__contacts-info {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+  }
+
+  .header__contacts-info-phone a {
+    font-size: 34px;
+    font-weight: 500;
+    line-height: 39.84px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    color: var(--blue);
+    text-decoration: none;
+  }
+
+  .header__contacts-info-email a {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 28.13px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    color: var(--light-gray);
+    text-decoration: none;
+  }
+
+  .menu__socials {
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+    margin-bottom: 48px;
+  }
+
+  .menu__socials .social {
+    margin: 0 10px;
+    position: relative;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+    color: var(--blue);
+  }
+
+  .menu__socials .social:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: -10px;
+    height: 22px;
+    width: 1px;
+    background-color: rgba(33, 33, 33, 0.2);
+    display: inline-block;
+  }
+
+  .js-close-menu {
+    font-size: 20px;
+    border-radius: 100%;
   }
 }
